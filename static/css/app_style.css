@@ -1,0 +1,186 @@
+body{
+    background: #181818;
+    background-size: 100vw 100vh;
+}
+/* Grid */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: minmax(100px,auto);
+    
+    
+    padding-right: 50px;
+    padding-left: 34px;
+    
+    gap: 1em;
+    padding-top: 2%;
+    
+}
+
+.grid > div{
+    background: rgba(39, 39, 39);;
+    gap: 1em;
+    padding: 1em;
+    border-radius: 15px;
+}
+.grid > div:hover{
+    border: 1px solid white;
+}
+.grid h1{
+    text-align: center;
+    color: white
+}
+
+/* Block */
+
+.block{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    background: rgba(0, 0, 0,0.5);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    z-index: 2;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+/* Box */
+
+.box{
+    width: 400px;
+    height: 330px;
+    background: #181818;
+    color: white;
+    position: absolute;
+    transition: all 500ms ease;
+    box-sizing: border-box;
+    border-radius: 5%;
+    display: flex;
+    position: relative;
+    transform: translateY(-30%);
+}
+
+.content{
+    box-sizing: border-box;
+    padding: 70px 30px;
+    
+}
+
+.content .lg{
+    width: 25px;
+    height: 25px;
+    border-radius: 50% ;
+    position: absolute;
+    top: 20px;
+    left: calc(50% + 150px);
+}
+
+.content label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.content input{
+    width: 100%;
+    margin-bottom: 20px;       
+}
+
+.content input[type="text"]{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    height: 20px;
+    color: white;
+    font-size: 16px;
+    font: bolder;
+    font-style: italic;
+}
+.content textarea{
+    width: 100%;
+    margin-bottom: 20px; 
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    height: 100px;
+    color: white;
+    font-size: 16px;
+    font: bolder;
+    font-style: italic;
+}
+
+.content button[type="submit"]{
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #C12A28;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+
+/* Boton Crear */
+.abrir_block{
+    background: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 40px;
+}
+
+/* Box2 */
+
+.box2 {
+    
+    height: 50%;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.box2 .card{
+    align-items: center;
+    width: 350px;
+    background: rgb(50, 50, 50);
+    border-radius: 20px;
+    border-color: black;
+    cursor: move;
+    word-wrap: break-word;
+    
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+
+.box2 .card.selec {
+    transform: scale(1.05);
+    background: rgb(97, 97, 97);
+    
+}
+.box2 .card.drag{
+    opacity: 0;
+}
+
+.borrar{
+    cursor: cell;
+    border-radius: 10px;
+    color: rgb(250, 250, 250);
+    background: #C12A28;
+    width: 30%;
+    text-align: center;
+    
+}
+

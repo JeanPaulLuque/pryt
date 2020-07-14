@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/app_style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/find.css')}}">
+    <title>App</title>
+    
+</head>
+<body>
+    <ul>
+        <li><a href="javascript:abrir()">Crear</a></li><!--Crear Nueva Tarea-->
+        <li><a href="javascript:account()">Cuenta</a></li><!--Perfil-->
+        <li >
+            <input type="text" placeholder="Type something..." id="busqueda">
+            <button type="button" id="bt_find" onclick="findT();">Buscar</button>
+        </li>
+
+        <li style="float:right"><a class="active" onclick="window.location='http://127.0.0.1:3000'" href="#">Cerrar Sesion</a></li>
+    </ul>
+
+    <!-- Agregar tarea -->
+    <div class="block" id="block">
+        <div class="box" id="vent">
+            <div class="content">
+                <a href="javascript:cerrar()"><img class="lg" src="../static/img/cerrar.png" alt="logo"> </a>
+                <form id='formtask'>
+                    <input type="text" id="titulo" placeholder="Tarea">
+                    <textarea id="Descripcion"  rows="10" placeholder="Descripcion"></textarea>
+                    <button type="submit" id ="ventana" onclick="javascript:cerrar()" >
+                        Crear Posit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tareas Grid -->
+    
+    <div class="grid">
+        <div class="lista">
+            <h1>Petición de Tarea</h1>
+            <div id="tasks" class="box2"></div>
+        </div>
+
+        <div class="lista2">
+            <h1>Selección de Tarea</h1>
+            <div id="tasks2" class="box2"></div>
+        </div>
+
+        <div class="lista3">
+            <h1>Desarrollo</h1>
+            <div id="tasks3" class="box2"></div>
+        </div>
+
+        <div class="lista4">
+            <h1>Tarea Finalizada</h1>
+            <div id="tasks4" class="box2"></div>
+        </div>
+      
+    </div>
+
+
+    <!--Scripts-->
+   <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>  <!-- Sortable Js -->
+    <script src="/static/js/app_js.js" ></script>
+    <script src="/static/js/findTitle.js" ></script>
+</body>
+</html>

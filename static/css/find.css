@@ -1,0 +1,41 @@
+li {
+    float: left;
+
+}   
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid rgb(53, 53, 53);
+    border-radius: 4px;
+    background-color: #333;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: rgb(37, 37, 37);
+    
+}
+
+#busqueda{
+    width: 250px;
+    padding: 5px 3px;
+    margin: 8px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#bt_find{
+    display: inline;
+    color: white;
+    border-color: rgb(27, 27, 27);
+    background-color: rgb(56, 56, 56);
+    padding: 10px 10px;
+    margin: 4px 0px;
+}
